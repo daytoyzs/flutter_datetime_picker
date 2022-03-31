@@ -309,7 +309,7 @@ class _DatePickerState extends State<_DatePickerComponent> {
               ),
               child: GestureDetector(
                 child: Material(
-                  color: theme.backgroundColor,
+                  color: theme.backgroundColor ?? theme.backgroundColor,
                   child: _renderPickerView(theme),
                 ),
               ),
@@ -398,7 +398,7 @@ class _DatePickerState extends State<_DatePickerComponent> {
 
   Widget _renderItemView(DatePickerTheme theme) {
     return Container(
-      color: theme.backgroundColor,
+      color: theme.backgroundColor ?? theme.backgroundColor,
       child: Directionality(
         textDirection: TextDirection.ltr,
         child: Row(
